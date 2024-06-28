@@ -44,3 +44,24 @@ const myFunction = function(){
 
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// Primitive(call by value milta hai) (Stack) and Non Primitive(call by reference milta hai)(Heap)
+
+const variable1 = 10
+variable2 = variable1
+variable2 = 20
+// Stack mai save hua hai aur variable 2 ko variable 1 ki copy value milegi
+console.log(variable1);
+console.log(variable2);
+
+const userone = {
+    emailId : "abc@email.com"
+}
+const user2 = userone
+user2.emailId = "xyz@gmail.com"
+
+// Heap mai save hua hai aur user2 ko userone ka reference(original value) milegi
+
+console.log(userone.emailId);
+console.log(user2.emailId);
